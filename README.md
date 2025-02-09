@@ -13,4 +13,8 @@ Technology Stack
     CSS3: Styling and animations to enhance the user experience.
     Google Fonts: Integrated fonts for a clean, modern look.
     JavaScript (Optional for future enhancements): Can be used for interactive features (e.g., live search, companion matching).
+    
+![Screenshot 2025-02-09 100532](https://github.com/user-attachments/assets/65a42743-f82f-493e-afba-2cf94eba80f0)
+![Screenshot 2025-02-09 100631](https://github.com/user-attachments/assets/ea0803c9-5de6-4877-a525-a25441fa62c8)
+
 
