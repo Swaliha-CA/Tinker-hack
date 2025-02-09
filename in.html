@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Trail - Travel Companion App</title>
+    <!-- Link to Google Fonts for variety -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Body */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #1ABC9C;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #16A085;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #3498DB, #1ABC9C);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        /* Section */
+        section {
+            padding: 60px 40px;
+            margin: 40px 20px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #F39C12;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .intro {
+            background: linear-gradient(145deg, #ECF0F1, #BDC3C7);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #7F8C8D;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .cta-btn {
+            background-color: #1ABC9C;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #16A085;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Feature Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            color: #3498DB;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: #7F8C8D;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1ABC9C;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Login Section */
+        .login-section {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #3498DB;
+        }
+
+        button.btn {
+            background-color: #3498DB;
+            color: white;
+            padding: 12px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        button.btn:hover {
+            background-color: #2980B9;
+            transform: scale(1.05);
+        }
+
+        .register-prompt {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Travel Trail</h1>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#find-companion">Find Companion</a>
+            <a href="translation.html">Translator</a>
+            <a href="#homestay">Home Stay</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Your Travel Adventure Awaits</h2>
+        <div class="intro">
+            <p>Join Travel Trail to find your perfect travel companion, explore exciting destinations, and book homestays worldwide!</p>
+            <a href="#" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">
+            <h3>Find Companions</h3>
+            <p>Match with like-minded travelers and embark on exciting adventures together.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Language Translator</h3>
+            <p>Break the language barrier with our built-in translator.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Book Homestays</h3>
+            <p>Find unique places to stay and experience local culture up close.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel Trail - Your Travel Companion App</p>
+    </footer>
+</body>
+</html>
